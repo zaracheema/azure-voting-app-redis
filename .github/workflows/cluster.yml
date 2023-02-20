@@ -23,7 +23,7 @@ jobs:
       templateVersion: 0.9.9
       rg: ${{ inputs.RG }}
       resourceName: ${{ inputs.NAME }}
-      templateParams: resourceName=${{ inputs.NAME }} agentCount=1 JustUseSystemPool=true custom_vnet=true CreateNetworkSecurityGroups=true registries_sku=Basic acrPushRolePrincipalId=_USER_OBJECT_ID_
+      templateParams: resourceName=${{ inputs.NAME }} agentCount=1 JustUseSystemPool=true custom_vnet=true CreateNetworkSecurityGroups=true enable_aad=true enableAzureRBAC=true adminPrincipalId=_USER_OBJECT_ID_ registries_sku=Basic acrPushRolePrincipalId=_USER_OBJECT_ID_ omsagent=true retentionInDays=30
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}

@@ -14,7 +14,7 @@ jobs:
       templateVersion: 0.9.9
       rg: rg1
       resourceName: cluster1
-      templateParams: resourceName=cluster1 agentCount=1 JustUseSystemPool=true custom_vnet=true CreateNetworkSecurityGroups=true registries_sku=Basic acrPushRolePrincipalId=_USER_OBJECT_ID_
+      templateParams: resourceName=cluster1 agentCount=1 JustUseSystemPool=true custom_vnet=true CreateNetworkSecurityGroups=true registries_sku=Basic 
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}

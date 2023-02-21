@@ -17,8 +17,8 @@ jobs:
       resourceName: cluster1
       templateParams: resourceName=cluster1 agentCount=1 JustUseSystemPool=true custom_vnet=true CreateNetworkSecurityGroups=true enable_aad=true enableAzureRBAC=true adminPrincipalId=_USER_OBJECT_ID1_ registries_sku=Basic acrPushRolePrincipalId=_USER_OBJECT_ID_ omsagent=true retentionInDays=30
     secrets:
-      AZURE_CLIENT_ID: ${{ secrets.azure_client_id }}
-      AZURE_TENANT_ID: ${{ secrets.azure_tenant_id }}
-      AZURE_SUBSCRIPTION_ID: ${{ secrets.azure_subscription_id }}
-      USER_OBJECT_ID: ${{ secrets.user_object_id }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      USER_OBJECT_ID: ${{ secrets.USER_OBJECT_ID }}
 

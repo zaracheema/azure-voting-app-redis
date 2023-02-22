@@ -40,7 +40,7 @@ jobs:
         uses: azure/setup-kubectl@v3
       - name: Deploy to AKS
         id: deploy-aks
-        uses: k8s.io/client-go@v1
+        uses: Azure/k8s-deploy@v4
         with:
           namespace: 'default'
           manifests: |

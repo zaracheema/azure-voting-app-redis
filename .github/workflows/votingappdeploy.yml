@@ -1,10 +1,10 @@
-name: Voting App Deploy
+name: build_deploy_aks
 on:
   push:
     paths:
       - "azure-vote/**"
-  workflow_dispatch:
-
+  workflow_dispatch: 
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,9 +15,9 @@ jobs:
         id: build-push-acr
         uses: azure/acr-build@v1
         with:
-          service_principal: ${{ secrets.azure_client_id }}
+          service_principal: ${{ secrets.service_principal }}
           service_principal_password: ${{ secrets.service_principal_password }}
-          tenant: ${{ secrets.azure_tenant_id }}
+          tenant: ${{ secrets.tenant }}
           registry: ${{ secrets.registry }}
           repository: ${{ secrets.repository }}
           image:  azure-vote-front

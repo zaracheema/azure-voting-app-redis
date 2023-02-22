@@ -35,8 +35,8 @@ jobs:
         with:
           resource-group: '${{ secrets.resource_group }}' 
           cluster-name: '${{ secrets.cluster_name }}'
-      - name: Setup kubectl/client-go
-        id: install-kubectl/client-go
+      - name: Setup kubectl
+        id: install-kubectl
         uses: azure/setup-kubectl@v3
       - name: Deploy to AKS
         id: deploy-aks

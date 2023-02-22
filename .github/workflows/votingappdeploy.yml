@@ -15,7 +15,7 @@ jobs:
         id: build-push-acr
         uses: azure/acr-build@v1
         with:
-          service_principal: ${{ secrets.service_principal }}
+          service_principal: ${{ secrets.azure_client_id }}
           service_principal_password: ${{ secrets.service_principal_password }}
           tenant: ${{ secrets.tenant }}
           registry: ${{ secrets.registry }}

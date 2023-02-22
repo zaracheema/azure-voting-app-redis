@@ -26,12 +26,12 @@ jobs:
           tag: ${{ github.sha }}
       - name: Azure login
         id: login
-        uses: azure/login@v1.4.3
+        uses: azure/login@v1.4.6
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Set AKS context
         id: set-context
-        uses: azure/aks-set-context@v3
+        uses: azure/aks-set-context@v3.2
         with:
           resource-group: '${{ secrets.resource_group }}' 
           cluster-name: '${{ secrets.cluster_name }}'
